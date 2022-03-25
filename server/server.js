@@ -86,8 +86,8 @@ app.post('/sightings', async (req, res) => {
 //Querying 
 app.get('/query', async (req, res) => {
     try {
-        //Create a variable that calls the data we want from the database
-        const allusers = await db.query("SELECT animal_seen, location_seen, email_address, species FROM individual FULL OUTER JOIN sightings ON animal_seen = nickname");
+        //Create a variable that calls the data we want from the database by using a JOIN query
+        const allusers = await db.query("SELECT animal_seen, location_seen, email_address, nickname, species FROM individual FULL OUTER JOIN sightings ON animal_seen = nickname");
         //Then send as a response the data rows
         res.json(allusers.rows);
     } catch (error) {

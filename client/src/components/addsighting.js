@@ -14,12 +14,6 @@ const AddSighting = () => {
     const handleSightingSubmit = async (event) => {
         event.preventDefault();
 
-        // if(animalHealth === 'true'){
-        //     setHealth(true)
-        // } else {
-        //     setHealth(false)
-        // }
-
         let today = new Date()
         let time = today.getHours().toString() + ":" + today.getMinutes().toString() + ":" + today.getSeconds().toString()
         setTimeSighted(time)
@@ -36,7 +30,6 @@ const AddSighting = () => {
         } catch (error) {
             console.error(error.message)
         }
-
     }
 
 

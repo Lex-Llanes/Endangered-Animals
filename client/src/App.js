@@ -2,6 +2,7 @@ import './App.css';
 import AddSpecies from "./components/addspecies";
 import AddAnimal  from "./components/addanimal"
 import AddSighting from "./components/addsighting"
+import ListAll from "./components/listall"
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <br/>
       <h1>Animal Sighting</h1>
       <AddSighting />
+      <br/>
+      <ListAll />
     </div>
   );
 }
